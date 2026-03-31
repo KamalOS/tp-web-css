@@ -56,3 +56,10 @@
     background-color: yellow;
     outline: 2px solid red;
 }
+
+.box {
+    width: 600px;
+    height: 600px;
+    background-color: lightblue;
+    margin: 0 auto;
+}

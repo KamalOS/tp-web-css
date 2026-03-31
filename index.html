@@ -10,7 +10,9 @@
 <body>
     <h1>Solutions TP CSS</h1>
 
-    <h2>1.1 Sélecteurs</h2>
+    <h2>Exercice 1 : Sélecteurs et spécificité</h2>
+
+    <h3>1.1 Sélecteurs</h3>
     <p>Survolez les règles CSS pour voir les éléments correspondants s'illuminer.</p>
 
     <div class="main-layout">
@@ -67,8 +69,52 @@
         </div>
     </div>
 
-    <h2>1.2 Spécificité</h2>
+    <h3>1.2 Spécificité</h3>
+    <ol>
+        <li>Classez ces sélecteurs par spécificité croissante : p, .text, #main, p.text, #main .text p
+            <p>p < .text < p.text < #main .text < #main .text p</p>
+        </li>
+        <li>Si deux règles ont la même spécificité, laquelle gagne ?
+            <p>La dernière règle déclarée gagne.</p>
+        </li>
+        <li>Pourquoi faut-il éviter !important ?
+            <p>Car il rend le code difficile à maintenir et à déboguer.</p>
+        </li>
+    </ol>
 
+    <h2>Exercice 2 : Box Model</h2>
+
+    <h3>2.1 Comprendre le Box Model</h3>
+    <div class="preview-pane">
+        <code>
+            <pre>.box {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #333;
+    margin: 15px;
+}</pre>
+        </code>
+    </div>
+    <ol>
+        <li>Avec box-sizing: content-box (défaut), quelle est la largeur totale visible de .box ?
+            <p>width + padding + border = 300px + 20px*2 + 5px*2 = 350px</p>
+        </li>
+        <li>Avec box-sizing: border-box, quelle est la largeur totale visible ?
+            <p>width = 300px</p>
+        </li>
+        <li>Écrivez le reset CSS universel pour box-sizing
+            <p>* {
+                box-sizing: border-box;
+                }</p>
+        </li>
+    </ol>
+
+    <h3>2.2 Centrer un élément</h3>
+    <p>Centrez horizontalement un élément &lt;div&gt; de 600px de large, puis centrez-le aussi verticalement dans la
+        page.</p>
+    <div class="preview-pane">
+        <div class="box"></div>
+    </div>
 </body>
 
 </html>
