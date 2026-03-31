@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sélecteurs CSS - Pratique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Solutions TP CSS</h1>
+
+    <h2>1.1 Sélecteurs</h2>
+    <p>Survolez les règles CSS pour voir les éléments correspondants s'illuminer.</p>
+
+    <div class="main-layout">
+        <div class="preview-pane">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/" class="active">Accueil</a></li>
+                    <li><a href="/about">À propos</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+            <main>
+                <article class="post featured">
+                    <h2>Premier article</h2>
+                    <p>Contenu...</p>
+                </article>
+                <article class="post">
+                    <h2>Deuxième article</h2>
+                    <p>Contenu...</p>
+                </article>
+            </main>
+        </div>
+
+        <div class="task-list">
+            <div class="task-card task-1">
+                <p>1. Sélectionnez tous les liens dans la navigation :</p>
+                <code>nav.main-nav a</code>
+            </div>
+
+            <div class="task-card task-2">
+                <p>2. Sélectionnez uniquement le lien actif :</p>
+                <code>nav.main-nav a.active</code>
+            </div>
+
+            <div class="task-card task-3">
+                <p>3. Sélectionnez l'article qui a la classe 'featured' :</p>
+                <code>article.featured</code>
+            </div>
+
+            <div class="task-card task-4">
+                <p>4. Sélectionnez le premier paragraphe de chaque article :</p>
+                <code>article p:first-of-type</code>
+            </div>
+
+            <div class="task-card task-5">
+                <p>5. Sélectionnez les éléments de liste (li) impairs :</p>
+                <code>li:nth-child(odd)</code>
+            </div>
+
+            <div class="task-card task-6">
+                <p>6. Sélectionnez les éléments de liste (li) pairs :</p>
+                <code>li:nth-child(even)</code>
+            </div>
+        </div>
+    </div>
+
+    <h2>1.2 Spécificité</h2>
+
+</body>
+
+</html>

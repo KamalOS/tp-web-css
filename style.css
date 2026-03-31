@@ -1,0 +1,58 @@
+/* Layout */
+.main-layout {
+    display: flex;
+    gap: 40px;
+}
+
+.preview-pane {
+    flex: 1;
+    border: 1px solid silver;
+    padding: 20px;
+}
+
+.task-list {
+    flex: 1;
+}
+
+.task-card {
+    border: 1px solid silver;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f7f7f7;
+    cursor: default;
+}
+
+.task-card:hover {
+    background-color: #e2e2e2;
+}
+
+/* Selectors */
+.main-layout:has(.task-1:hover) .preview-pane nav.main-nav a {
+    background-color: yellow;
+    outline: 2px solid red;
+}
+
+.main-layout:has(.task-2:hover) .preview-pane nav.main-nav a.active {
+    background-color: yellow;
+    outline: 2px solid red;
+}
+
+.main-layout:has(.task-3:hover) .preview-pane article.featured {
+    background-color: yellow;
+    outline: 2px solid red;
+}
+
+.main-layout:has(.task-4:hover) .preview-pane article p:first-of-type {
+    background-color: yellow;
+    outline: 2px solid red;
+}
+
+.main-layout:has(.task-5:hover) .preview-pane li:nth-child(odd) {
+    background-color: yellow;
+    outline: 2px solid red;
+}
+
+.main-layout:has(.task-6:hover) .preview-pane li:nth-child(even) {
+    background-color: yellow;
+    outline: 2px solid red;
+}
