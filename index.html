@@ -8,9 +8,13 @@
 </head>
 
 <body>
-    <h1>Solutions TP CSS</h1>
+    <header>
+        <h1>Solutions TP CSS</h1>
+    </header>
 
-    <h2>Exercice 1 : Sélecteurs et spécificité</h2>
+    <main>
+        <section id="exercice-1">
+            <h2>Exercice 1 : Sélecteurs et spécificité</h2>
 
     <h3>1.1 Sélecteurs</h3>
     <p>Survolez les règles CSS pour voir les éléments correspondants s'illuminer.</p>
@@ -81,8 +85,10 @@
             <p>Car il rend le code difficile à maintenir et à déboguer.</p>
         </li>
     </ol>
+        </section>
 
-    <h2>Exercice 2 : Box Model</h2>
+        <section id="exercice-2">
+            <h2>Exercice 2 : Box Model</h2>
 
     <h3>2.1 Comprendre le Box Model</h3>
     <div class="preview-pane">
@@ -115,8 +121,10 @@
     <div class="preview-pane">
         <div class="box"></div>
     </div>
+        </section>
 
-    <h2>Exercice 3 : Flexbox</h2>
+        <section id="exercice-3">
+            <h2>Exercice 3 : Flexbox</h2>
     <h3>3.1 Barre de navigation</h3>
     <p>Créez une barre de navigation horizontale avec un logo à gauche et des liens à droite :</p>
     <div class="preview-pane">
@@ -151,8 +159,10 @@
             </div>
         </div>
     </div>
+        </section>
 
-    <h2>Exercice 4 : CSS Grid</h2>
+        <section id="exercice-4">
+            <h2>Exercice 4 : CSS Grid</h2>
 
     <h3>4.1 Grille de cartes responsive</h3>
     <p>Créez une grille de cartes qui s'adapte automatiquement au nombre de colonnes :</p>
@@ -177,8 +187,10 @@
             <footer class="footer">Footer</footer>
         </div>
     </div>
+        </section>
 
-    <h2>Exercice 5 : Responsive Design</h2>
+        <section id="exercice-5">
+            <h2>Exercice 5 : Responsive Design</h2>
     <h3>5.1 Mobile First</h3>
     <p>Transformez cette page pour qu'elle soit responsive (mobile first) :</p>
     <div class="preview-pane">
@@ -250,8 +262,10 @@
     }
 }</pre></code>
     </div>
+        </section>
 
-    <h2>Exercice 6 : Variables CSS et thèmes</h2>
+        <section id="exercice-6">
+            <h2>Exercice 6 : Variables CSS et thèmes</h2>
     <h3>6.1 Système de couleurs</h3>
     <p>Créez un système de variables CSS pour un thème clair et sombre :</p>
     <div class="preview-pane">
@@ -269,6 +283,69 @@
     --primary-color: #007bff;
 }</pre></code>
     </div>
+        </section>
+
+        <section id="exercice-7">
+            <h2>Exercice 7 : Transitions et animations</h2>
+    <h3>7.1 Bouton animé</h3>
+    <p>Créez un bouton avec des transitions au survol :</p>
+    <div class="preview-pane">
+        <button class="btn">Bouton</button>
+    </div>
+
+    <h3>7.2 Animation de chargement</h3>
+    <p>Créez un spinner de chargement avec @keyframes :</p>
+    <div class="preview-pane">
+        <div class="spinner"></div>
+    </div>
+        </section>
+
+        <section id="exercice-8">
+            <h2>Exercice 8 : Quiz de révision</h2>
+    <ol>
+        <li>Quel sélecteur a la spécificité la plus haute ?
+            <ul>
+                <li>[ ] a) .header .nav a</li>
+                <li>[x] b) #header a</li>
+                <li>[ ] c) header nav a</li>
+                <li>[ ] d) a.active</li>
+            </ul>
+        </li>
+        <li>Avec box-sizing: border-box, un élément avec width: 200px et padding: 20px a une largeur totale de :
+            <ul>
+                <li>[ ] a) 240px</li>
+                <li>[x] b) 200px</li>
+                <li>[ ] c) 220px</li>
+                <li>[ ] d) 160px</li>
+            </ul>
+        </li>
+        <li>Pour centrer un élément verticalement et horizontalement avec Flexbox :
+            <ul>
+                <li>[ ] a) justify-content: center</li>
+                <li>[ ] b) align-items: center</li>
+                <li>[x] c) justify-content: center ET align-items: center</li>
+                <li>[ ] d) text-align: center</li>
+            </ul>
+        </li>
+        <li>La valeur 1fr en CSS Grid signifie :
+            <ul>
+                <li>[ ] a) 1 pixel</li>
+                <li>[x] b) 1 fraction de l'espace disponible</li>
+                <li>[ ] c) 1 pourcentage</li>
+                <li>[ ] d) 1 rem</li>
+            </ul>
+        </li>
+        <li>L'approche "Mobile First" utilise :
+            <ul>
+                <li>[ ] a) max-width dans les media queries</li>
+                <li>[x] b) min-width dans les media queries</li>
+                <li>[ ] c) device-width</li>
+                <li>[ ] d) orientation</li>
+            </ul>
+        </li>
+    </ol>
+        </section>
+    </main>
 </body>
 
 </html>
