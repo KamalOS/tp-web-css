@@ -16,83 +16,85 @@
         <section id="exercice-1">
             <h2>Exercice 1 : Sélecteurs et spécificité</h2>
 
-    <h3>1.1 Sélecteurs</h3>
-    <p>Survolez les règles CSS pour voir les éléments correspondants s'illuminer.</p>
+            <h3>1.1 Sélecteurs</h3>
+            <p>Survolez les règles CSS pour voir les éléments correspondants s'illuminer.</p>
 
-    <div class="main-layout">
-        <div class="preview-pane">
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="/" class="active">Accueil</a></li>
-                    <li><a href="/about">À propos</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-            </nav>
-            <main>
-                <article class="post featured">
-                    <h2>Premier article</h2>
-                    <p>Contenu...</p>
-                </article>
-                <article class="post">
-                    <h2>Deuxième article</h2>
-                    <p>Contenu...</p>
-                </article>
-            </main>
-        </div>
+            <div class="main-layout">
+                <div class="preview-pane">
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="/" class="active">Accueil</a></li>
+                            <li><a href="/about">À propos</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <main>
+                        <article class="post featured">
+                            <h2>Premier article</h2>
+                            <p>Contenu...</p>
+                        </article>
+                        <article class="post">
+                            <h2>Deuxième article</h2>
+                            <p>Contenu...</p>
+                        </article>
+                    </main>
+                </div>
 
-        <div class="task-list">
-            <div class="task-card task-1">
-                <p>1. Sélectionnez tous les liens dans la navigation :</p>
-                <code>nav.main-nav a</code>
+                <div class="task-list">
+                    <div class="task-card task-1">
+                        <p>1. Sélectionnez tous les liens dans la navigation :</p>
+                        <code>nav.main-nav a</code>
+                    </div>
+
+                    <div class="task-card task-2">
+                        <p>2. Sélectionnez uniquement le lien actif :</p>
+                        <code>nav.main-nav a.active</code>
+                    </div>
+
+                    <div class="task-card task-3">
+                        <p>3. Sélectionnez l'article qui a la classe <code>'featured'</code> :</p>
+                        <code>article.featured</code>
+                    </div>
+
+                    <div class="task-card task-4">
+                        <p>4. Sélectionnez le premier paragraphe de chaque article :</p>
+                        <code>article p:first-of-type</code>
+                    </div>
+
+                    <div class="task-card task-5">
+                        <p>5. Sélectionnez les éléments de liste (<code>li</code>) impairs :</p>
+                        <code>li:nth-child(odd)</code>
+                    </div>
+
+                    <div class="task-card task-6">
+                        <p>6. Sélectionnez les éléments de liste (<code>li</code>) pairs :</p>
+                        <code>li:nth-child(even)</code>
+                    </div>
+                </div>
             </div>
 
-            <div class="task-card task-2">
-                <p>2. Sélectionnez uniquement le lien actif :</p>
-                <code>nav.main-nav a.active</code>
-            </div>
-
-            <div class="task-card task-3">
-                <p>3. Sélectionnez l'article qui a la classe 'featured' :</p>
-                <code>article.featured</code>
-            </div>
-
-            <div class="task-card task-4">
-                <p>4. Sélectionnez le premier paragraphe de chaque article :</p>
-                <code>article p:first-of-type</code>
-            </div>
-
-            <div class="task-card task-5">
-                <p>5. Sélectionnez les éléments de liste (li) impairs :</p>
-                <code>li:nth-child(odd)</code>
-            </div>
-
-            <div class="task-card task-6">
-                <p>6. Sélectionnez les éléments de liste (li) pairs :</p>
-                <code>li:nth-child(even)</code>
-            </div>
-        </div>
-    </div>
-
-    <h3>1.2 Spécificité</h3>
-    <ol>
-        <li>Classez ces sélecteurs par spécificité croissante : p, .text, #main, p.text, #main .text p
-            <p>p < .text < p.text < #main .text < #main .text p</p>
-        </li>
-        <li>Si deux règles ont la même spécificité, laquelle gagne ?
-            <p>La dernière règle déclarée gagne.</p>
-        </li>
-        <li>Pourquoi faut-il éviter !important ?
-            <p>Car il rend le code difficile à maintenir et à déboguer.</p>
-        </li>
-    </ol>
+            <h3>1.2 Spécificité</h3>
+            <ol>
+                <li>Classez ces sélecteurs par spécificité croissante : <code>p</code>, <code>.text</code>,
+                    <code>#main</code>, <code>p.text</code>, <code>#main .text p</code>
+                    <p><code>p</code> &lt; <code>.text</code> &lt; <code>p.text</code> &lt; <code>#main .text</code>
+                        &lt; <code>#main .text p</code></p>
+                </li>
+                <li>Si deux règles ont la même spécificité, laquelle gagne ?
+                    <p>La dernière règle déclarée gagne.</p>
+                </li>
+                <li>Pourquoi faut-il éviter <code>!important</code> ?
+                    <p>Car il rend le code difficile à maintenir et à déboguer.</p>
+                </li>
+            </ol>
         </section>
 
         <section id="exercice-2">
             <h2>Exercice 2 : Box Model</h2>
 
-    <h3>2.1 Comprendre le Box Model</h3>
-    <div class="preview-pane">
-        <code>
+            <h3>2.1 Comprendre le Box Model</h3>
+            <div class="preview-pane">
+                <code>
             <pre>.box {
     width: 300px;
     padding: 20px;
@@ -100,101 +102,107 @@
     margin: 15px;
 }</pre>
         </code>
-    </div>
-    <ol>
-        <li>Avec box-sizing: content-box (défaut), quelle est la largeur totale visible de .box ?
-            <p>width + padding + border = 300px + 20px*2 + 5px*2 = 350px</p>
-        </li>
-        <li>Avec box-sizing: border-box, quelle est la largeur totale visible ?
-            <p>width = 300px</p>
-        </li>
-        <li>Écrivez le reset CSS universel pour box-sizing
-            <p>* {
-                box-sizing: border-box;
-                }</p>
-        </li>
-    </ol>
+            </div>
+            <ol>
+                <li>Avec <code>box-sizing: content-box</code> (défaut), quelle est la largeur totale visible de
+                    <code>.box</code> ?
+                    <p><code>width</code> + <code>padding</code> + <code>border</code> = 300px + 20px*2 + 5px*2 = 350px
+                    </p>
+                </li>
+                <li>Avec <code>box-sizing: border-box</code>, quelle est la largeur totale visible ?
+                    <p><code>width</code> = 300px</p>
+                </li>
+                <li>Écrivez le reset CSS universel pour <code>box-sizing</code>
+                    <p>* {
+                        box-sizing: border-box;
+                        }</p>
+                </li>
+            </ol>
 
-    <h3>2.2 Centrer un élément</h3>
-    <p>Centrez horizontalement un élément &lt;div&gt; de 600px de large, puis centrez-le aussi verticalement dans la
-        page.</p>
-    <div class="preview-pane">
-        <div class="box"></div>
-    </div>
+            <h3>2.2 Centrer un élément</h3>
+            <p>Centrez horizontalement un élément <code>&lt;div&gt;</code> de 600px de large, puis centrez-le aussi
+                verticalement
+                dans la
+                page.</p>
+            <div class="preview-pane">
+                <div class="box-container">
+                    <div class="box"></div>
+                </div>
+            </div>
         </section>
 
         <section id="exercice-3">
             <h2>Exercice 3 : Flexbox</h2>
-    <h3>3.1 Barre de navigation</h3>
-    <p>Créez une barre de navigation horizontale avec un logo à gauche et des liens à droite :</p>
-    <div class="preview-pane">
-        <nav class="navbar">
-            <div class="logo">MonSite</div>
-            <ul class="nav-links">
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+            <h3>3.1 Barre de navigation</h3>
+            <p>Créez une barre de navigation horizontale avec un logo à gauche et des liens à droite :</p>
+            <div class="preview-pane">
+                <nav class="navbar">
+                    <div class="logo">MonSite</div>
+                    <ul class="nav-links">
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-    <h3>3.2 Cartes de même hauteur</h3>
-    <p>Créez 3 cartes côte à côte avec un footer qui reste toujours en bas :</p>
-    <div class="preview-pane">
-        <div class="cards">
-            <div class="card">
-                <h3>Carte 1</h3>
-                <p>Contenu court.</p>
-                <a href="#" class="card-link">En savoir plus</a>
+            <h3>3.2 Cartes de même hauteur</h3>
+            <p>Créez 3 cartes côte à côte avec un footer qui reste toujours en bas :</p>
+            <div class="preview-pane">
+                <div class="cards">
+                    <div class="card">
+                        <h3>Carte 1</h3>
+                        <p>Contenu court.</p>
+                        <a href="#" class="card-link">En savoir plus</a>
+                    </div>
+                    <div class="card">
+                        <h3>Carte 2</h3>
+                        <p>Contenu beaucoup plus long pour tester l'alignement vertical des boutons.</p>
+                        <a href="#" class="card-link">En savoir plus</a>
+                    </div>
+                    <div class="card">
+                        <h3>Carte 3</h3>
+                        <p>Contenu moyen.</p>
+                        <a href="#" class="card-link">En savoir plus</a>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h3>Carte 2</h3>
-                <p>Contenu beaucoup plus long pour tester l'alignement vertical des boutons.</p>
-                <a href="#" class="card-link">En savoir plus</a>
-            </div>
-            <div class="card">
-                <h3>Carte 3</h3>
-                <p>Contenu moyen.</p>
-                <a href="#" class="card-link">En savoir plus</a>
-            </div>
-        </div>
-    </div>
         </section>
 
         <section id="exercice-4">
             <h2>Exercice 4 : CSS Grid</h2>
 
-    <h3>4.1 Grille de cartes responsive</h3>
-    <p>Créez une grille de cartes qui s'adapte automatiquement au nombre de colonnes :</p>
-    <div class="preview-pane">
-        <div class="grid-cards">
-            <div class="card">Carte 1</div>
-            <div class="card">Carte 2</div>
-            <div class="card">Carte 3</div>
-            <div class="card">Carte 4</div>
-            <div class="card">Carte 5</div>
-            <div class="card">Carte 6</div>
-        </div>
-    </div>
+            <h3>4.1 Grille de cartes responsive</h3>
+            <p>Créez une grille de cartes qui s'adapte automatiquement au nombre de colonnes :</p>
+            <div class="preview-pane">
+                <div class="grid-cards">
+                    <div class="card">Carte 1</div>
+                    <div class="card">Carte 2</div>
+                    <div class="card">Carte 3</div>
+                    <div class="card">Carte 4</div>
+                    <div class="card">Carte 5</div>
+                    <div class="card">Carte 6</div>
+                </div>
+            </div>
 
-    <h3>4.2 Layout complet avec Grid Areas</h3>
-    <p>Créez une mise en page complète : header, sidebar, main, footer.</p>
-    <div class="preview-pane">
-        <div class="page-layout">
-            <header class="header">Header</header>
-            <nav class="sidebar">Sidebar</nav>
-            <main class="main">Contenu principal</main>
-            <footer class="footer">Footer</footer>
-        </div>
-    </div>
+            <h3>4.2 Layout complet avec Grid Areas</h3>
+            <p>Créez une mise en page complète : header, sidebar, main, footer.</p>
+            <div class="preview-pane">
+                <div class="page-layout">
+                    <header class="header">Header</header>
+                    <nav class="sidebar">Sidebar</nav>
+                    <main class="main">Contenu principal</main>
+                    <footer class="footer">Footer</footer>
+                </div>
+            </div>
         </section>
 
         <section id="exercice-5">
             <h2>Exercice 5 : Responsive Design</h2>
-    <h3>5.1 Mobile First</h3>
-    <p>Transformez cette page pour qu'elle soit responsive (mobile first) :</p>
-    <div class="preview-pane">
-        <code><pre>/* Base mobile */
+            <h3>5.1 Mobile First</h3>
+            <p>Transformez cette page pour qu'elle soit responsive (mobile first) :</p>
+            <div class="preview-pane">
+                <code><pre>/* Base mobile */
 .container {
     width: 100%;
     padding: 15px;
@@ -213,11 +221,11 @@
 .sidebar {
     display: none;
 }</pre></code>
-    </div>
+            </div>
 
-    <p>Solution :</p>
-    <div class="preview-pane">
-        <code><pre>/* Tablette (à partir de 600px) */
+            <p>Solution :</p>
+            <div class="preview-pane">
+                <code><pre>/* Tablette (à partir de 600px) */
 @media (min-width: 600px) {
     .container {
         max-width: 900px;
@@ -261,15 +269,15 @@
         display: block;
     }
 }</pre></code>
-    </div>
+            </div>
         </section>
 
         <section id="exercice-6">
             <h2>Exercice 6 : Variables CSS et thèmes</h2>
-    <h3>6.1 Système de couleurs</h3>
-    <p>Créez un système de variables CSS pour un thème clair et sombre :</p>
-    <div class="preview-pane">
-        <code><pre>/* Thème clair */
+            <h3>6.1 Système de couleurs</h3>
+            <p>Créez un système de variables CSS pour un thème clair et sombre :</p>
+            <div class="preview-pane">
+                <code><pre>/* Thème clair */
 :root {
     --bg-color: #ffffff;
     --text-color: #333333;
@@ -282,68 +290,69 @@
     --text-color: #ffffff;
     --primary-color: #007bff;
 }</pre></code>
-    </div>
+            </div>
         </section>
 
         <section id="exercice-7">
             <h2>Exercice 7 : Transitions et animations</h2>
-    <h3>7.1 Bouton animé</h3>
-    <p>Créez un bouton avec des transitions au survol :</p>
-    <div class="preview-pane">
-        <button class="btn">Bouton</button>
-    </div>
+            <h3>7.1 Bouton animé</h3>
+            <p>Créez un bouton avec des transitions au survol :</p>
+            <div class="preview-pane">
+                <button class="btn">Bouton</button>
+            </div>
 
-    <h3>7.2 Animation de chargement</h3>
-    <p>Créez un spinner de chargement avec @keyframes :</p>
-    <div class="preview-pane">
-        <div class="spinner"></div>
-    </div>
+            <h3>7.2 Animation de chargement</h3>
+            <p>Créez un spinner de chargement avec <code>@keyframes</code> :</p>
+            <div class="preview-pane">
+                <div class="spinner"></div>
+            </div>
         </section>
 
         <section id="exercice-8">
             <h2>Exercice 8 : Quiz de révision</h2>
-    <ol>
-        <li>Quel sélecteur a la spécificité la plus haute ?
-            <ul>
-                <li>[ ] a) .header .nav a</li>
-                <li>[x] b) #header a</li>
-                <li>[ ] c) header nav a</li>
-                <li>[ ] d) a.active</li>
-            </ul>
-        </li>
-        <li>Avec box-sizing: border-box, un élément avec width: 200px et padding: 20px a une largeur totale de :
-            <ul>
-                <li>[ ] a) 240px</li>
-                <li>[x] b) 200px</li>
-                <li>[ ] c) 220px</li>
-                <li>[ ] d) 160px</li>
-            </ul>
-        </li>
-        <li>Pour centrer un élément verticalement et horizontalement avec Flexbox :
-            <ul>
-                <li>[ ] a) justify-content: center</li>
-                <li>[ ] b) align-items: center</li>
-                <li>[x] c) justify-content: center ET align-items: center</li>
-                <li>[ ] d) text-align: center</li>
-            </ul>
-        </li>
-        <li>La valeur 1fr en CSS Grid signifie :
-            <ul>
-                <li>[ ] a) 1 pixel</li>
-                <li>[x] b) 1 fraction de l'espace disponible</li>
-                <li>[ ] c) 1 pourcentage</li>
-                <li>[ ] d) 1 rem</li>
-            </ul>
-        </li>
-        <li>L'approche "Mobile First" utilise :
-            <ul>
-                <li>[ ] a) max-width dans les media queries</li>
-                <li>[x] b) min-width dans les media queries</li>
-                <li>[ ] c) device-width</li>
-                <li>[ ] d) orientation</li>
-            </ul>
-        </li>
-    </ol>
+            <ol>
+                <li>Quel sélecteur a la spécificité la plus haute ?
+                    <ul>
+                        <li>[ ] a) <code>.header .nav a</code></li>
+                        <li>[x] b) <code>#header a</code></li>
+                        <li>[ ] c) <code>header nav a</code></li>
+                        <li>[ ] d) <code>a.active</code></li>
+                    </ul>
+                </li>
+                <li>Avec <code>box-sizing: border-box</code>, un élément avec <code>width: 200px</code> et
+                    <code>padding: 20px</code> a une largeur totale de :
+                    <ul>
+                        <li>[ ] a) 240px</li>
+                        <li>[x] b) 200px</li>
+                        <li>[ ] c) 220px</li>
+                        <li>[ ] d) 160px</li>
+                    </ul>
+                </li>
+                <li>Pour centrer un élément verticalement et horizontalement avec Flexbox :
+                    <ul>
+                        <li>[ ] a) <code>justify-content: center</code></li>
+                        <li>[ ] b) <code>align-items: center</code></li>
+                        <li>[x] c) <code>justify-content: center</code> ET <code>align-items: center</code></li>
+                        <li>[ ] d) <code>text-align: center</code></li>
+                    </ul>
+                </li>
+                <li>La valeur <code>1fr</code> en CSS Grid signifie :
+                    <ul>
+                        <li>[ ] a) 1 pixel</li>
+                        <li>[x] b) 1 fraction de l'espace disponible</li>
+                        <li>[ ] c) 1 pourcentage</li>
+                        <li>[ ] d) 1 rem</li>
+                    </ul>
+                </li>
+                <li>L'approche "Mobile First" utilise :
+                    <ul>
+                        <li>[ ] a) <code>max-width</code> dans les media queries</li>
+                        <li>[x] b) <code>min-width</code> dans les media queries</li>
+                        <li>[ ] c) <code>device-width</code></li>
+                        <li>[ ] d) <code>orientation</code></li>
+                    </ul>
+                </li>
+            </ol>
         </section>
     </main>
 </body>
