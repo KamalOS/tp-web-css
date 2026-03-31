@@ -177,6 +177,79 @@
             <footer class="footer">Footer</footer>
         </div>
     </div>
+
+    <h2>Exercice 5 : Responsive Design</h2>
+    <h3>5.1 Mobile First</h3>
+    <p>Transformez cette page pour qu'elle soit responsive (mobile first) :</p>
+    <div class="preview-pane">
+        <code><pre>/* Base mobile */
+.container {
+    width: 100%;
+    padding: 15px;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.content {
+    display: block;
+}
+
+.sidebar {
+    display: none;
+}</pre></code>
+    </div>
+
+    <p>Solution :</p>
+    <div class="preview-pane">
+        <code><pre>/* Tablette (à partir de 600px) */
+@media (min-width: 600px) {
+    .container {
+        max-width: 900px;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+    }
+
+    .sidebar {
+        display: block;
+    }
+}
+ 
+/* Desktop (à partir de 768px) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+    }
+
+    .sidebar {
+        display: block;
+    }
+}</pre></code>
+    </div>
 </body>
 
 </html>
